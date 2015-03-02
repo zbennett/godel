@@ -97,7 +97,7 @@ bool godel_scan_analysis::RoughnessScorer::analyze(const Cloud& in, ColorCloud& 
   // Generate output
   generateColorPoints(scan, scores, out);
 
-  ROS_INFO_STREAM("Min score: " << *std::min(scores.begin(), scores.end()) << " Max: " << *std::max(scores.begin(), scores.end()));
+  // ROS_INFO_STREAM("Min score: " << *std::min(scores.begin(), scores.end()) << " Max: " << *std::max(scores.begin(), scores.end()));
 
   return true;
 }

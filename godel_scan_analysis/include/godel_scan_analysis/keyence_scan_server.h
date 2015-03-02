@@ -24,6 +24,8 @@ namespace godel_scan_analysis
 
     ScanServer()
       : map_(new ColorCloud)
+      , start_time_(ros::Time::now())
+      , n_(0)
     {
       ros::NodeHandle nh;
       scan_sub_ = nh.subscribe("profiles", 100, &ScanServer::scanCallback, this);
@@ -32,11 +34,21 @@ namespace godel_scan_analysis
 
     void scanCallback(const Cloud& cloud)
     {
-      ROS_INFO("Processing scan");
+      // ROS_INFO("Processing scan");
+      // ros::Time start = ros::Time::now();
       scorer_.analyze(cloud, *map_);
+      // ros::Duration dt = ros::Time::now() - start;
+      // ROS_INFO("Took %f seconds", dt.toSec());
       map_->header.frame_id = "sensor_optical_frame";
       cloud_pub_.publish(map_);
-      map_.reset(new ColorCloud);
+      map_->clear();
+      n_++;
+
+      if (n_ % 100 == 0)
+      {
+        double dt = (ros::Time::now() - start_time_).toSec();
+        ROS_INFO("Rate: %f", n_ / dt);
+      }
     }
 
     /**
@@ -53,6 +65,8 @@ namespace godel_scan_analysis
     ros::Publisher cloud_pub_; // for outputting colored clouds of data
     std::string from_frame_; // typically laser_scan_frame
     std::string to_frame_; // typically world_frame
+    ros::Time start_time_;
+    unsigned n_;
   };
 
 } // end namespace godel_scan_analysis
