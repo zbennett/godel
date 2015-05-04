@@ -50,7 +50,7 @@ namespace
   static pcl::PointXYZRGB makeColoredPoint(const rms::Point<double>& pt, double score)
   {
     // TODO: put these colorization values into the params struct
-    static const double max_score = 0.5e-4;
+    static const double max_score = 0.75e-4;
     static const double min_score = 0.0;
 
     pcl::PointXYZRGB temp;

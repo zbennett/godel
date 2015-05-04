@@ -89,7 +89,7 @@
 			<origin xyz="${workcell_length * 0.25} 0 0" rpy="0 0 0"/>
 		</joint>
 
-		<xacro:workcell_element name="front_wall1" parent="world_frame"
+		<!-- <xacro:workcell_element name="front_wall1" parent="world_frame"
 			 length="0.1" width="2.220" height="${workcell_height}" offset_x="1.3375" offset_y="0"/>
 		<xacro:workcell_element name="back_wall1" parent="world_frame"
 			 length="0.04" width="2.00" height="${workcell_height}" offset_x="0.02" offset_y="0"/>
@@ -98,7 +98,7 @@
 		<xacro:workcell_element name="right_wall1" parent="world_frame"
 			 length="1.221" width="0.1" height="${workcell_height}" offset_x="0.687" offset_y="-1.060"/>
 		<xacro:workcell_element name="pole1" parent="world_frame"
-			length="0.09" width="0.09" height="${workcell_height}" offset_x="0.9465" offset_y="-0.845"/>
+			length="0.09" width="0.09" height="${workcell_height}" offset_x="0.9465" offset_y="-0.845"/> -->
 	</xacro:macro>
 	<!-- end of workcell part1 components macro -->	
 

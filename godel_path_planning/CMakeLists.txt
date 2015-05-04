@@ -20,9 +20,9 @@ find_package(Eigen REQUIRED)
 ADD_DEFINITIONS("-std=c++0x") # Descartes core uses c++11 in header files
 
 catkin_package(
-#  INCLUDE_DIRS include
+  INCLUDE_DIRS include
 #  LIBRARIES godel_path_planning
-#  CATKIN_DEPENDS godel_msgs godel_process_path_generation roscpp
+  CATKIN_DEPENDS godel_msgs roscpp
 #  DEPENDS system_lib
 )
 
