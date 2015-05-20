@@ -37,6 +37,7 @@
 #include <godel_plugins/widgets/robot_scan_configuration.h>
 #include <godel_plugins/widgets/blend_tool_param_window.h>
 #include <godel_plugins/widgets/scan_tool_configuration_window.h>
+#include <godel_plugins/widgets/move_to_home_window.h>
 
 // macros
 #ifndef DEG2RAD
@@ -154,6 +155,7 @@ protected:
     BlendingPlanConfigWidget *robot_blend_config_window_;
     SurfaceDetectionConfigWidget *surface_detect_config_window_;
     ScanPlanConfigWidget *scan_plan_config_window_;
+    MoveToHomeWidget *move_to_home_window_;
 
 
 	ros::ServiceClient surface_detection_client_;

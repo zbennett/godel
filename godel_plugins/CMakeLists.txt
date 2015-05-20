@@ -23,7 +23,8 @@ set(godel_plugins_SRCS
         src/widgets/parameter_window_base.cpp
         src/widgets/surface_detection_configuration.cpp
         src/widgets/robot_scan_configuration.cpp
-	src/widgets/scan_tool_configuration_window.cpp)
+	src/widgets/scan_tool_configuration_window.cpp
+	src/widgets/move_to_home_window.cpp)
 
 set(godel_plugins_HDRS
 	include/godel_plugins/rqt_plugins/robot_blending_plugin.h
@@ -33,7 +34,8 @@ set(godel_plugins_HDRS
         include/godel_plugins/widgets/parameter_window_base.h
         include/godel_plugins/widgets/surface_detection_configuration.h
         include/godel_plugins/widgets/robot_scan_configuration.h
-	include/godel_plugins/widgets/scan_tool_configuration_window.h)
+	include/godel_plugins/widgets/scan_tool_configuration_window.h
+	include/godel_plugins/widgets/move_to_home_window.h)
 
 set(godel_plugins_UIS
 	src/widgets/robot_blending_plugin.ui 
@@ -41,7 +43,8 @@ set(godel_plugins_UIS
 	src/widgets/pose_widget.ui
         src/widgets/surface_detection_configuration.ui
         src/widgets/blend_tool_param_window.ui
-	src/widgets/scan_tool_configuration_window.ui)
+	src/widgets/scan_tool_configuration_window.ui
+	src/widgets/move_to_home_window.ui)
 
 set(godel_plugins_INCLUDE_DIRECTORIES
 	include

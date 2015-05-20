@@ -71,6 +71,7 @@ void RobotBlendingWidget::init()
 
 		robot_blend_config_window_= new BlendingPlanConfigWidget(blending_plan_parameters_);
 		scan_plan_config_window_=new ScanPlanConfigWidget(scan_plan_parameters_);
+        move_to_home_window_=new MoveToHomeWidget();
 
 	// setting signals and slots
 	connect(robot_scan_config_window_,SIGNAL(parameters_changed()),this,SLOT(robot_scan_params_changed_handler()));
@@ -302,8 +303,10 @@ void RobotBlendingWidget::blend_options_click_handler()
 
 void RobotBlendingWidget::scan_plan_options_click_handler()
 {
-		scan_plan_config_window_->show();
+        //scan_plan_config_window_->show();
+        move_to_home_window_->show();
 }
+
 
 void RobotBlendingWidget::surface_options_click_handler()
 {
